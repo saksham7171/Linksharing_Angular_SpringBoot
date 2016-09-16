@@ -1,6 +1,4 @@
-package com.ttnd.pojo;
-
-import java.sql.Blob;
+package com.ttnd.pojo.CO;
 
 public class UserCO {
 
@@ -17,13 +15,6 @@ public class UserCO {
 
     public String getFullName() {
         return getFirstName() + " " + getLastName();
-    }
-
-    public UserCO(String firstName, String username, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.username = username;
-        this.lastName = lastName;
-        this.email = email;
     }
 
     public Long getId() {

@@ -2,7 +2,7 @@ package com.ttnd.controller;
 
 import com.ttnd.domain.User;
 import com.ttnd.pojo.Response;
-import com.ttnd.pojo.UserCO;
+import com.ttnd.pojo.CO.UserCO;
 import com.ttnd.repository.TopicRepository;
 import com.ttnd.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

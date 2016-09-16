@@ -1,4 +1,4 @@
-package com.ttnd.pojo;
+package com.ttnd.pojo.CO;
 
 public class TopicCO {
 

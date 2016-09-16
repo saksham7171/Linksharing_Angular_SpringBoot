@@ -33,7 +33,6 @@ public class Bootstrap {
     @EventListener(ContextRefreshedEvent.class)
     void init() {
         createDummyuser();
-     //   createDummyResources();
     }
 
     void createDummyuser() {
@@ -45,18 +44,6 @@ public class Bootstrap {
         dummyUser.getTopics().add(topic1);
         dummyUser.getTopics().add(topic2);
         userRepository.saveAndFlush(dummyUser);
-    }
-
-    void createDummyResources() {
-        User dummyUser = userRepository.getOne(1L);
-        Topic topic = topicRepository.getOne(1L);
-        Resource resource1 = new DocumentResource("Document Resoource1", dummyUser, topic, new Date(), new Date(), "soomething");
-        Resource resource2 = new LinkResource("Document Resoource2", dummyUser, topic, new Date(), new Date(), "soomething");
-        topic.getResources().add(resource1);
-        topic.getResources().add(resource2);
-        dummyUser.getResources().add(resource1);
-        dummyUser.getResources().add(resource2);
-        userRepository.save(dummyUser);
     }
 
     byte[] defaultImage() {

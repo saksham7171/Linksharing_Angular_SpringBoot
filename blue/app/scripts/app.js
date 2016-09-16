@@ -16,7 +16,8 @@ angular
         'ngAnimate',
         'toastr',
         'ngCookies',
-        'ngResource'
+        'ngResource',
+        'xeditable'
     ])
 
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider,$resourceProvider) {

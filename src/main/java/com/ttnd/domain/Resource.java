@@ -1,11 +1,11 @@
 package com.ttnd.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name ="resource_type")
 public class Resource {
 
     @Id
@@ -15,10 +15,18 @@ public class Resource {
     @Column(nullable = true)
     String description;
 
+    @Column(nullable = true)
+    String url;
+
+    @Column(nullable = true)
+    String filepath;
+
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     User createdBy;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "topic_id")
     Topic topic;
@@ -31,8 +39,10 @@ public class Resource {
 
     public Resource(){}
 
-    public Resource(String description, User createdBy, Topic topic, Date dateCreated, Date lastUpdated) {
+    public Resource(String description, String url, String filepath, User createdBy, Topic topic, Date dateCreated, Date lastUpdated) {
         this.description = description;
+        this.url = url;
+        this.filepath = filepath;
         this.createdBy = createdBy;
         this.topic = topic;
         this.dateCreated = dateCreated;
@@ -82,4 +92,19 @@ public class Resource {
     public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
-}
+
+    public String getFilepath() {
+        return filepath;
+    }
+
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }}

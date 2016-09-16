@@ -46,7 +46,7 @@ public class Topic {
         this.lastUpdated = lastUpdated;
     }
 
-    public Long getTopicId() {
+    public Long getId() {
         return id;
     }
 

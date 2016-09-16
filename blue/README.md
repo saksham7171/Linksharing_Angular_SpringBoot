@@ -1,7 +1,5 @@
 ## Ani Theme - Free AngularJS Dashboard Starter Theme
 
-## [Demo](http://rawgit.com/start-angular/ani-theme/master/dist/index.html)
-
 Ani Theme is a Boilerplate for Animated AngularJS Starter Theme written with Bootstrap LESS. Powered by Gulp.
 ![Preview](/examples/preview.png)
 
@@ -17,6 +15,12 @@ Find out more [Free Angular Themes at StartAngular.com](http://www.startangular.
 - `gulp serve` - For development mode
 - `gulp build` - concat, minify and generate the files for deployment
 
+## Install these plugins too before running application
+1. bower install --save vaadin-upload
+2. bower install --save webcomponentsjs
+3. bower install angular-resource
+4. bower install angular-toastr
+5. bower install angular-cookies
 
 ### Goodness of Bootstrap Less
 In the source, we have the less files of Bootstrap attached and the variables have been updated to create this theme. You can change the variable in the less file. Animation and Transitions are in separate less file.   
